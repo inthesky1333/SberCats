@@ -14,11 +14,11 @@ btnAdd.addEventListener('click', () => {
   const popup = new Form('add', null, api, Card, ConfirmPopup);
   popup.init();
 });
-let catsList;
-// let catsList = localStorage.getItem('cats');
-// if (catsList) {
-//   catsList = JSON.parse(catsList);
-// }
+
+let catsList = localStorage.getItem('cats');
+if (catsList) {
+  catsList = JSON.parse(catsList);
+}
 
 if (!catsList) {
   Loader.show();
