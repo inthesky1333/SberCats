@@ -1,0 +1,13 @@
+.animations:hover {
+    cursor: pointer;
+}
+
+.animations:hover .info {
+    height: 105px;
+    background: black;
+}
+
+.animations:hover .info > .age,
+.animations:hover .info > .rate {
+    visibility: visible;
+}

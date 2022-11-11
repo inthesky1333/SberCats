@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat List</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body class="app">
+<header class="header">
+    <h1>Cats</h1>
+    <button class="button-add">Add Cat</button>
+</header>
+
+<main class="container">
+</main>
+<footer class="footer">
+    <span>Created by</span>
+    <span>Anton Galich</span>
+    <a href="https://github.com/inthesky1333">GitHub</a>
+    <span>© 2022</span>
+</footer>
+<template id="form">
+    <div class="popup-wrapper">
+        <div class="popup">
+            <div id="closeForm" class="button-delete button">X</div>
+            <div class="content">
+                <h2 class="title"></h2>
+                <form id="add">
+                    <div class="row">
+                        <label for="catName" class="label">Имя котика</label>
+                        <input type="text" id="catName" name="catName" class="input" required></div>
+                    <div class="row">
+                        <label for="number" class="label">ID Кота</label>
+                        <input type="number" id="number" name="number" required min="1">
+                    </div>
+                    <div class="row">
+                        <label for="img_link" class="label">Ссылка на картинку</label>
+                        <input type="text" id="img_link" name="img_link" class="input">
+                    </div>
+                    <div class="row">
+                        <label for="age" class="label">Возраст</label>
+                        <input type="number" id="age" name="age" min="0" max="100" class="input">
+                    </div>
+                    <div class="row">
+                        <label for="rate" class="label">Рейтинг</label>
+                        <input type="range" id="rate" name="rate" min="0" max="5" value="3" class="input">
+                    </div>
+                    <div class="row">
+                        <label for="favourite" class="label">
+                            <input type="checkbox" id="favourite" name="favourite" class="input">
+                            Любимчик
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="description" class="label">Описание</label>
+                        <textarea id="description" name="description" class="input"></textarea>
+                    </div>
+                    <button type="submit" class="button-add">Добавить котика</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="card">
+    <div class="card animations">
+        <div class="photo"></div>
+        <div class="info">
+            <div class="name"></div>
+            <div class="age"></div>
+            <div class="rate"></div>
+        </div>
+        <div class="button-delete button">X</div>
+        <div class="button-edit button"></div>
+    </div>
+</template>
+<template id="photo">
+    <div class="popup-wrapper">
+        <div class="photoWrapper">
+            <div id="closePhoto" class="button-delete button">X</div>
+            <img src="#" alt="photo" class="popupPhoto">
+        </div>
+    </div>
+</template>
+<template id="loader">
+    <div class="popup-wrapper">
+        <h2 class="loader">Loading...</h2>
+    </div>
+</template>
+<template id="confirm">
+    <div class="popup-wrapper">
+        <div id="closeConfirm" class="button-delete button">X</div>
+        <div class="confirm-content">
+            <h2 class="title"></h2>
+            <div class="button-group">
+                <button id="ok" class="button-confirm">Ok</button>
+                <button id="cancel" class="button-confirm button-confirm-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</template>
+<script src="./js/main.js" defer type="module"></script>
+</body>
+</html>

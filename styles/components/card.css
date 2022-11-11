@@ -1,0 +1,19 @@
+.card {
+    height: 300px;
+    box-shadow: 0 0 15px 0 rgb(12, 12, 12);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    background-color: silver;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+
+

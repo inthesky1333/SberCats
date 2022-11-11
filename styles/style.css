@@ -1,0 +1,33 @@
+@import url("./layout/layout.css");
+@import url("./components/container.css");
+@import url("./components/card.css");
+@import url("./components/info.css");
+@import url("./components/buttons.css");
+@import url("./components/popup.css");
+@import url("./components/photo.css");
+@import url("./components/loader.css");
+@import url("./components/confirm.css");
+@import url("./animations.css");
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+
+
