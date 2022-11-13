@@ -19,6 +19,7 @@ export class Form {
     this.element.querySelector('button').innerText = this.type === 'add' ? 'Добавить' : 'Сохранить';
     this.form = this.element.querySelector('form');
     this.form.catName.value = this.data.name || '';
+    this.form.favourite.checked = this.data.favourite || false;
     this.form.age.value = this.data.age || '';
     this.form.rate.value = this.data.rate || '';
     this.form.description.value = this.data.description || '';
@@ -52,6 +53,7 @@ export class Form {
       const newData = {
         id: this.form.number.value,
         name: this.form.catName.value,
+        favourite: this.form.favourite.checked,
         age: this.form.age.value,
         rate: this.form.rate.value,
         img_link: this.form.img_link.value,
@@ -73,6 +75,7 @@ export class Form {
       id: this.form.number.value,
       name: this.form.catName.value,
       age: this.form.age.value,
+      favourite: this.form.favourite.checked,
       rate: this.form.rate.value,
       img_link: this.form.img_link.value,
     };
