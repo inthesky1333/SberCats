@@ -42,20 +42,24 @@ export class Card {
     }
   }
 
-  deleteHandler() {
-    this.api.delCat(this.data.id)
+  _deleteView() {
+    this.card.remove();
+    this.card = null;
+  }
+
+  _deleteHandler() {
+    this.api.deleteCat(this.data.id)
       .then((res) => res.json())
       .then((data) => {
         if (data.message === 'ok') {
-          this.card.remove();
-          this.card = null;
+          this._deleteView();
         }
       });
   }
 
   _deleteCard() {
     this.deletedBtn.addEventListener('click', () => {
-      const popup = new this.ConfirmPopup(this.deleteHandler.bind(this), 'delete');
+      const popup = new this.ConfirmPopup(this._deleteHandler.bind(this), 'delete');
       popup.init();
     });
   }

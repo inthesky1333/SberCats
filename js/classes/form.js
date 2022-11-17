@@ -79,7 +79,7 @@ export class Form {
       rate: this.form.rate.value,
       img_link: this.form.img_link.value,
     };
-    this.api.updCat(this.data.id, newData)
+    this.api.updateCat(this.data.id, newData)
       .then((res) => res.json())
       .then((data) => {
         if (data.message === 'ok') {

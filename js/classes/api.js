@@ -19,7 +19,7 @@ class Api {
     });
   }
 
-  updCat(id, body) {
+  updateCat(id, body) {
     return fetch(`${this.path}${this.name}/update/${id}`, {
       method: 'PUT',
       headers: {
@@ -30,7 +30,7 @@ class Api {
     });
   }
 
-  delCat(id) {
+  deleteCat(id) {
     return fetch(`${this.path}${this.name}/delete/${id}`, {
       method: 'DELETE',
     });
