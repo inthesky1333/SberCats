@@ -65,6 +65,7 @@ export class Form {
             this.deleteView();
             const card = new this.Card(newData, document.querySelector('.container'), this.api);
             card.init();
+            localStorage.clear();
           }
         });
     });
@@ -85,6 +86,7 @@ export class Form {
         if (data.message === 'ok') {
           this.Card.updateCard(newData);
           this.deleteView();
+          localStorage.clear();
         }
       });
   }

@@ -53,6 +53,7 @@ export class Card {
       .then((data) => {
         if (data.message === 'ok') {
           this._deleteView();
+          localStorage.clear();
         }
       });
   }
