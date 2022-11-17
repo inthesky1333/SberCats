@@ -74,7 +74,7 @@ export class Card {
 
   editCard() {
     this.editBtn.addEventListener('click', () => {
-      const popup = new this.Form('edit', this.data, this.api, this, this.ConfirmPopup);
+      const popup = new this.Form('edit', this.data, this.api, this, this.PhotoPopup, this.ConfirmPopup);
       popup.init();
     });
   }

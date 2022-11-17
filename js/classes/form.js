@@ -1,6 +1,7 @@
 export class Form {
-  constructor(type, data, api, card, confirmPopup) {
+  constructor(type, data, api, card, photoPopup, confirmPopup) {
     this.Card = card;
+    this.PhotoPopup = photoPopup;
     this.ConfirmPopup = confirmPopup;
     this.api = api;
     this.type = type;
@@ -63,7 +64,7 @@ export class Form {
         .then((data) => {
           if (data.message === 'ok') {
             this.deleteView();
-            const card = new this.Card(newData, document.querySelector('.container'), this.api);
+            const card = new this.Card(newData, document.querySelector('.container'), this.api, Form, this.PhotoPopup, this.ConfirmPopup);
             card.init();
             localStorage.clear();
           }

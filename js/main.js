@@ -11,7 +11,7 @@ const container = document.querySelector('.container');
 const btnAdd = document.querySelector('.button-add');
 
 btnAdd.addEventListener('click', () => {
-  const popup = new Form('add', null, api, Card, ConfirmPopup);
+  const popup = new Form('add', null, api, Card, PhotoPopup, ConfirmPopup);
   popup.init();
 });
 
